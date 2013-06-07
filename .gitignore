@@ -161,3 +161,11 @@ pip-log.txt
 
 # Mac crap
 .DS_Store
+
+
+
+#---------------
+# My extra stuff
+.idea
+*.iml
+out
