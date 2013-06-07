@@ -1,3 +1,5 @@
+package tokens;
+
 /**
  * Created with IntelliJ IDEA.
  * User: Bertie

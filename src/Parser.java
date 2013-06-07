@@ -1,7 +1,9 @@
+import exceptions.ParseException;
+import statements.*;
+import tokens.*;
+
 import java.util.ArrayList;
-import java.util.LinkedList;
 import java.util.List;
-import java.util.Queue;
 
 /**
  * Created with IntelliJ IDEA.
@@ -11,16 +13,16 @@ import java.util.Queue;
  * To change this template use File | Settings | File Templates.
  */
 public class Parser {
-	private Queue<Token> tokens;
-	private Queue<Statement> statements;
+	private List<Token> tokens;
+	private List<Statement> statements;
 
-	public Parser(Queue<Token> tokens) {
+	public Parser(List<Token> tokens) {
 		this.tokens = tokens;
 	}
 
-	public Queue<Statement> parse()
+	public List<Statement> parse()
 			throws ParseException {
-		statements = new LinkedList<Statement>();
+		statements = new ArrayList<Statement>();
 		matchOptionalWhitespace();
 		statements.add(matchInitializeStatement());
 		matchOptionalWhitespace();
@@ -54,12 +56,29 @@ public class Parser {
 		}
 	}
 
-	private void consume() {
-		tokens.remove();
+	private void consume()
+			throws ParseException {
+		try {
+			tokens.remove(0);
+		} catch(IndexOutOfBoundsException e) {
+			throw new ParseException(
+				"Reached end of token stream unexpectedly while parsing");
+		}
 	}
 
-	private Token getLookaheadToken() {
-		return tokens.element();
+	private Token getLookaheadToken()
+			throws ParseException {
+		return getLookaheadToken(0);
+	}
+
+	private Token getLookaheadToken(int i)
+			throws ParseException {
+		try {
+			return tokens.get(i);
+		} catch(IndexOutOfBoundsException e) {
+			throw new ParseException(
+				"Reached end of token stream unexpectedly while parsing");
+		}
 	}
 
 	private void matchWhitespace()

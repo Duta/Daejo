@@ -1,7 +1,10 @@
+import exceptions.LexException;
+import tokens.*;
+
+import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.LinkedList;
+import java.util.List;
 import java.util.Map;
-import java.util.Queue;
 
 /**
  * Created with IntelliJ IDEA.
@@ -21,9 +24,9 @@ public class Lexer {
 		reset();
 	}
 
-	public Queue<Token> lex()
+	public List<Token> lex()
 			throws LexException {
-		Queue<Token> tokens = new LinkedList<Token>();
+		List<Token> tokens = new ArrayList<Token>();
 		Token token = null;
 		do {
 			token = getNext();

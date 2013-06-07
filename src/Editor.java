@@ -1,3 +1,5 @@
+import exceptions.LexException;
+import exceptions.ParseException;
 import javafx.application.Application;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
@@ -6,11 +8,15 @@ import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextArea;
-import javafx.scene.layout.*;
+import javafx.scene.layout.HBox;
+import javafx.scene.layout.Priority;
+import javafx.scene.layout.StackPane;
+import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
+import statements.Statement;
 
-import java.util.Queue;
+import java.util.List;
 
 /**
  * Created with IntelliJ IDEA.
@@ -62,7 +68,7 @@ public class Editor extends Application {
 				String toParse = daejoText.getText();
 				Transformer transformer = new Transformer(toParse);
 				try {
-					Queue<Statement> statements = transformer.transform();
+					List<Statement> statements = transformer.transform();
 					StringBuilder sb = new StringBuilder();
 					for(Statement statement : statements) {
 						sb.append(statement);

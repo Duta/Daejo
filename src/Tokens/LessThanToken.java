@@ -1,3 +1,5 @@
+package tokens;
+
 /**
  * Created with IntelliJ IDEA.
  * User: Bertie
@@ -5,8 +7,8 @@
  * Time: 23:36
  * To change this template use File | Settings | File Templates.
  */
-public class GreaterThanToken extends Token {
-	public GreaterThanToken() {
-		super(">");
+public class LessThanToken extends Token {
+	public LessThanToken() {
+		super("<");
 	}
 }

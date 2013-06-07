@@ -1,4 +1,9 @@
-import java.util.Queue;
+import exceptions.LexException;
+import exceptions.ParseException;
+import statements.Statement;
+import tokens.Token;
+
+import java.util.List;
 
 /**
  * Created with IntelliJ IDEA.
@@ -14,7 +19,7 @@ public class Transformer {
 		this.input = input;
 	}
 
-	public Queue<Statement> transform()
+	public List<Statement> transform()
 			throws LexException, ParseException {
 		// The lexer takes a list of characters
 		// and returns a list of tokens
@@ -23,10 +28,10 @@ public class Transformer {
 
 		// Lex the input
 		Lexer lexer = new Lexer(input);
-		Queue<Token> tokens = lexer.lex();
+		List<Token> tokens = lexer.lex();
 		// Parse the tokens
 		Parser parser = new Parser(tokens);
-		Queue<Statement> statements = parser.parse();
+		List<Statement> statements = parser.parse();
 
 		return statements;
 	}
