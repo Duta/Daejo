@@ -1,4 +1,4 @@
-package tokens;
+package lexer;
 
 /**
  * Created with IntelliJ IDEA.
@@ -7,8 +7,8 @@ package tokens;
  * Time: 21:37
  * To change this template use File | Settings | File Templates.
  */
-public class LSqBrackToken extends Token {
-	public LSqBrackToken() {
-		super("[");
+public class CommaToken extends Token {
+	public CommaToken() {
+		super(",");
 	}
 }

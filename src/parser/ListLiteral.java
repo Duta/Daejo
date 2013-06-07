@@ -1,4 +1,4 @@
-package statements;
+package parser;
 
 import java.util.List;
 

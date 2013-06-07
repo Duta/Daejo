@@ -1,5 +1,6 @@
 import exceptions.LexException;
 import exceptions.ParseException;
+import exceptions.RunException;
 import javafx.application.Application;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
@@ -14,9 +15,6 @@ import javafx.scene.layout.StackPane;
 import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
-import statements.Statement;
-
-import java.util.List;
 
 /**
  * Created with IntelliJ IDEA.
@@ -66,21 +64,19 @@ public class Editor extends Application {
 				ready = false;
 				button.setText("Parsing...");
 				String toParse = daejoText.getText();
-				Transformer transformer = new Transformer(toParse);
+				Daejo daejo = new Daejo(toParse);
 				try {
-					List<Statement> statements = transformer.transform();
-					StringBuilder sb = new StringBuilder();
-					for(Statement statement : statements) {
-						sb.append(statement);
-						sb.append("\n");
-					}
-					outputText.setText(sb.toString());
+					daejo.parseAndRun();
+					outputText.setText("Ran successfully");
 				} catch(LexException e) {
 					outputText.setText(String.format(
 						"Invalid token at line %d, column %d\n",
 						e.getLine(), e.getColumn()));
 				} catch(ParseException e) {
 					outputText.setText("Couldn't parse input. Message:\n" +
+						e.getMessage());
+				} catch(RunException e) {
+					outputText.setText("Runtime error. Message:\n" +
 						e.getMessage());
 				}
 				outputText.setText(outputText.getText() + "\nInput: \"" + toParse + "\"");

@@ -1,6 +1,7 @@
+package parser;
+
 import exceptions.ParseException;
-import statements.*;
-import tokens.*;
+import lexer.*;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -13,6 +14,9 @@ import java.util.List;
  * To change this template use File | Settings | File Templates.
  */
 public class Parser {
+	private String[] reservedWords = {
+		"var"
+	};
 	private List<Token> tokens;
 	private List<Statement> statements;
 
@@ -24,28 +28,50 @@ public class Parser {
 			throws ParseException {
 		statements = new ArrayList<Statement>();
 		matchOptionalWhitespace();
-		statements.add(matchInitializeStatement());
+		statements.add(matchStatement());
 		matchOptionalWhitespace();
 		return statements;
 	}
 
+	private Statement matchStatement()
+			throws ParseException {
+		Token token = lookahead();
+		if(token instanceof WordToken) {
+			WordToken wordToken = (WordToken)token;
+			if("var".equals(wordToken.getText())) {
+				return matchInitializeStatement();
+			}
+		}
+		throw new ParseException("Couldn't parse statement");
+	}
+
 	private InitializeStatement matchInitializeStatement()
 			throws ParseException {
-		Identifier type = matchIdentifier();
+		Word var = matchWord();
+		if(!"var".equals(var.getWord())) {
+			throw new ParseException(
+				"Expecting var, found " + var.getWord());
+		}
 		matchWhitespace();
-		Identifier label = matchIdentifier();
+		Word label = matchWord();
+		for(String reservedWord : reservedWords) {
+			if(reservedWord.equals(label.getWord())) {
+				throw new ParseException(
+					"Label \"" + label.getWord() + "\" is a reserved word.");
+			}
+		}
 		matchOptionalWhitespace();
 		matchType(EqualsToken.class);
 		matchOptionalWhitespace();
 		Expression expr = matchExpression();
 		matchOptionalWhitespace();
 		matchType(SemicolonToken.class);
-		return new InitializeStatement(type, label, expr);
+		return new InitializeStatement(label, expr);
 	}
 
 	private Token matchType(Class clss)
 			throws ParseException {
-		Token token = getLookaheadToken();
+		Token token = lookahead();
 		if(clss.isInstance(token)) {
 			consume();
 			return token;
@@ -66,12 +92,12 @@ public class Parser {
 		}
 	}
 
-	private Token getLookaheadToken()
+	private Token lookahead()
 			throws ParseException {
-		return getLookaheadToken(0);
+		return lookahead(0);
 	}
 
-	private Token getLookaheadToken(int i)
+	private Token lookahead(int i)
 			throws ParseException {
 		try {
 			return tokens.get(i);
@@ -85,12 +111,12 @@ public class Parser {
 			throws ParseException {
 		do {
 			matchType(WhitespaceToken.class);
-		} while(getLookaheadToken() instanceof WhitespaceToken);
+		} while(lookahead() instanceof WhitespaceToken);
 	}
 
 	private void matchOptionalWhitespace()
 			throws ParseException {
-		while(getLookaheadToken() instanceof WhitespaceToken) {
+		while(lookahead() instanceof WhitespaceToken) {
 			matchType(WhitespaceToken.class);
 		}
 	}
@@ -109,16 +135,16 @@ public class Parser {
 			}
 			matchOptionalWhitespace();
 			elements.add(matchExpression());
-		} while(getLookaheadToken() instanceof CommaToken);
+		} while(lookahead() instanceof CommaToken);
 		matchOptionalWhitespace();
 		matchType(RSqBrackToken.class);
 		return new ListLiteral(elements);
 	}
 
-	private Identifier matchIdentifier()
+	private Word matchWord()
 			throws ParseException {
 		Token idToken = matchType(WordToken.class);
-		return new Identifier(idToken.getText());
+		return new Word(idToken.getText());
 	}
 
 	private Int matchInt()
@@ -129,9 +155,9 @@ public class Parser {
 
 	private Expression matchExpression()
 			throws ParseException {
-		Token token = getLookaheadToken();
+		Token token = lookahead();
 		if(token instanceof WordToken) {
-			return matchIdentifier();
+			return matchWord();
 		}
 		if(token instanceof IntToken) {
 			return matchInt();

@@ -1,7 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8b57aeb2-4e0e-4ab6-8e32-d1961dd8610d" name="Default" comment="" />
+    <list default="true" id="8b57aeb2-4e0e-4ab6-8e32-d1961dd8610d" name="Default" comment="Beginnings of interpreter, structure change, various renamings/rethinkings">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/exceptions/RunException.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/interpreter/DaejoClass.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/interpreter/IntValue.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/interpreter/Interpreter.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/interpreter/ListValue.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/interpreter/Value.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/interpreter/Variable.java" />
+      <change type="DELETED" beforePath="C:\Users\Bertie\Documents\GitHub\Daejo\src\Interpreter.java" afterPath="" />
+      <change type="MOVED" beforePath="C:\Users\Bertie\Documents\GitHub\Daejo\src\Lexer.java" afterPath="$PROJECT_DIR$/src/lexer/Lexer.java" />
+      <change type="MOVED" beforePath="C:\Users\Bertie\Documents\GitHub\Daejo\src\Parser.java" afterPath="$PROJECT_DIR$/src/parser/Parser.java" />
+      <change type="MOVED" beforePath="C:\Users\Bertie\Documents\GitHub\Daejo\src\Tokens\CommaToken.java" afterPath="$PROJECT_DIR$/src/lexer/CommaToken.java" />
+      <change type="MOVED" beforePath="C:\Users\Bertie\Documents\GitHub\Daejo\src\Tokens\EOFToken.java" afterPath="$PROJECT_DIR$/src/lexer/EOFToken.java" />
+      <change type="MOVED" beforePath="C:\Users\Bertie\Documents\GitHub\Daejo\src\Tokens\EqualsToken.java" afterPath="$PROJECT_DIR$/src/lexer/EqualsToken.java" />
+      <change type="MOVED" beforePath="C:\Users\Bertie\Documents\GitHub\Daejo\src\Tokens\GreaterThanToken.java" afterPath="$PROJECT_DIR$/src/lexer/GreaterThanToken.java" />
+      <change type="MOVED" beforePath="C:\Users\Bertie\Documents\GitHub\Daejo\src\Tokens\IntToken.java" afterPath="$PROJECT_DIR$/src/lexer/IntToken.java" />
+      <change type="MOVED" beforePath="C:\Users\Bertie\Documents\GitHub\Daejo\src\Tokens\LSqBrackToken.java" afterPath="$PROJECT_DIR$/src/lexer/LSqBrackToken.java" />
+      <change type="MOVED" beforePath="C:\Users\Bertie\Documents\GitHub\Daejo\src\Tokens\LessThanToken.java" afterPath="$PROJECT_DIR$/src/lexer/LessThanToken.java" />
+      <change type="MOVED" beforePath="C:\Users\Bertie\Documents\GitHub\Daejo\src\Tokens\PlusToken.java" afterPath="$PROJECT_DIR$/src/lexer/PlusToken.java" />
+      <change type="MOVED" beforePath="C:\Users\Bertie\Documents\GitHub\Daejo\src\Tokens\RSqBrackToken.java" afterPath="$PROJECT_DIR$/src/lexer/RSqBrackToken.java" />
+      <change type="MOVED" beforePath="C:\Users\Bertie\Documents\GitHub\Daejo\src\Tokens\SemicolonToken.java" afterPath="$PROJECT_DIR$/src/lexer/SemicolonToken.java" />
+      <change type="MOVED" beforePath="C:\Users\Bertie\Documents\GitHub\Daejo\src\Tokens\Token.java" afterPath="$PROJECT_DIR$/src/lexer/Token.java" />
+      <change type="MOVED" beforePath="C:\Users\Bertie\Documents\GitHub\Daejo\src\Tokens\WhitespaceToken.java" afterPath="$PROJECT_DIR$/src/lexer/WhitespaceToken.java" />
+      <change type="MOVED" beforePath="C:\Users\Bertie\Documents\GitHub\Daejo\src\Tokens\WordToken.java" afterPath="$PROJECT_DIR$/src/lexer/WordToken.java" />
+      <change type="MOVED" beforePath="C:\Users\Bertie\Documents\GitHub\Daejo\src\Transformer.java" afterPath="$PROJECT_DIR$/src/Daejo.java" />
+      <change type="MOVED" beforePath="C:\Users\Bertie\Documents\GitHub\Daejo\src\statements\Expression.java" afterPath="$PROJECT_DIR$/src/parser/Expression.java" />
+      <change type="MOVED" beforePath="C:\Users\Bertie\Documents\GitHub\Daejo\src\statements\Identifier.java" afterPath="$PROJECT_DIR$/src/parser/Word.java" />
+      <change type="MOVED" beforePath="C:\Users\Bertie\Documents\GitHub\Daejo\src\statements\InitializeStatement.java" afterPath="$PROJECT_DIR$/src/parser/InitializeStatement.java" />
+      <change type="MOVED" beforePath="C:\Users\Bertie\Documents\GitHub\Daejo\src\statements\Int.java" afterPath="$PROJECT_DIR$/src/parser/Int.java" />
+      <change type="MOVED" beforePath="C:\Users\Bertie\Documents\GitHub\Daejo\src\statements\ListLiteral.java" afterPath="$PROJECT_DIR$/src/parser/ListLiteral.java" />
+      <change type="MOVED" beforePath="C:\Users\Bertie\Documents\GitHub\Daejo\src\statements\Statement.java" afterPath="$PROJECT_DIR$/src/parser/Statement.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Editor.java" afterPath="$PROJECT_DIR$/src/Editor.java" />
+    </list>
     <ignored path="Daejo.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -58,53 +91,28 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Lexer.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Lexer.java">
+      <file leaf-file-name="Parser.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/parser/Parser.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="31" column="30" selection-start="661" selection-end="661" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="e#600#607#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Parser.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Parser.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="121" column="47" selection-start="2985" selection-end="2985" vertical-scroll-proportion="0.33381712">
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#2409#2421#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Interpreter.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Interpreter.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="22" column="11" selection-start="406" selection-end="406" vertical-scroll-proportion="0.0">
+            <state line="29" column="36" selection-start="605" selection-end="605" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Transformer.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Transformer.java">
+      <file leaf-file-name="Interpreter.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/interpreter/Interpreter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="27" column="0" selection-start="640" selection-end="640" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state line="42" column="9" selection-start="1052" selection-end="1052" vertical-scroll-proportion="0.29580575">
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Editor.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Editor.java">
+      <file leaf-file-name="Word.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/parser/Word.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="22" selection-start="585" selection-end="585" vertical-scroll-proportion="0.0">
+            <state line="16" column="30" selection-start="310" selection-end="310" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -123,29 +131,29 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/SemicolonToken.java" />
-        <option value="$PROJECT_DIR$/src/PlusToken.java" />
-        <option value="$PROJECT_DIR$/src/ParseException.java" />
-        <option value="$PROJECT_DIR$/src/Expression.java" />
-        <option value="$PROJECT_DIR$/src/InitializeStatement.java" />
-        <option value="$PROJECT_DIR$/src/Test.java" />
-        <option value="$PROJECT_DIR$/src/NumberToken.java" />
-        <option value="$PROJECT_DIR$/src/Int.java" />
-        <option value="$PROJECT_DIR$/src/Identifier.java" />
-        <option value="$PROJECT_DIR$/src/ListLiteral.java" />
-        <option value="$PROJECT_DIR$/src/Statement.java" />
-        <option value="$PROJECT_DIR$/src/Lexer.java" />
         <option value="$PROJECT_DIR$/src/Transformer.java" />
-        <option value="$PROJECT_DIR$/src/Editor.java" />
+        <option value="$PROJECT_DIR$/src/Daejo.java" />
+        <option value="$PROJECT_DIR$/src/exceptions/RunException.java" />
         <option value="$PROJECT_DIR$/src/Interpreter.java" />
-        <option value="$PROJECT_DIR$/src/Parser.java" />
+        <option value="$PROJECT_DIR$/src/interpreter/Label.java" />
+        <option value="$PROJECT_DIR$/src/Editor.java" />
+        <option value="$PROJECT_DIR$/src/interpreter/Type.java" />
+        <option value="$PROJECT_DIR$/src/interpreter/Variable.java" />
+        <option value="$PROJECT_DIR$/src/parser/InitializeStatement.java" />
+        <option value="$PROJECT_DIR$/src/interpreter/Value.java" />
+        <option value="$PROJECT_DIR$/src/interpreter/IntValue.java" />
+        <option value="$PROJECT_DIR$/src/interpreter/ListValue.java" />
+        <option value="$PROJECT_DIR$/src/interpreter/DaejoClass.java" />
+        <option value="$PROJECT_DIR$/src/parser/Word.java" />
+        <option value="$PROJECT_DIR$/src/parser/Parser.java" />
+        <option value="$PROJECT_DIR$/src/interpreter/Interpreter.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
-    <option name="width" value="1456" />
+    <option name="width" value="1452" />
     <option name="height" value="876" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -206,6 +214,42 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Daejo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Daejo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="parser" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Daejo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Daejo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="interpreter" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
       <pane id="PackagesPane">
@@ -225,18 +269,19 @@
     <property name="GoToFile.includeJavaFiles" value="false" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
     <property name="options.splitter.main.proportions" value="0.3" />
-    <property name="options.lastSelected" value="project.propVCSSupport.Mappings" />
-    <property name="MemberChooser.sorted" value="false" />
     <property name="recentsLimit" value="5" />
+    <property name="MemberChooser.sorted" value="false" />
+    <property name="options.lastSelected" value="project.propVCSSupport.Mappings" />
     <property name="MemberChooser.showClasses" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
-    <property name="options.searchVisible" value="true" />
-    <property name="options.splitter.details.proportions" value="0.2" />
-    <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="dynamic.classpath" value="false" />
+    <property name="MemberChooser.copyJavadoc" value="false" />
+    <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
+      <recent name="exceptions" />
       <recent name="" />
       <recent name="src" />
     </key>
@@ -297,6 +342,24 @@
         <option name="Maven.BeforeRunTask" enabled="false" />
       </method>
     </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method>
+        <option name="AntTarget" enabled="false" />
+        <option name="BuildArtifacts" enabled="false" />
+        <option name="Make" enabled="true" />
+        <option name="Maven.BeforeRunTask" enabled="false" />
+      </method>
+    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <module name="" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
@@ -322,24 +385,6 @@
       <envs />
       <properties />
       <listeners />
-      <method>
-        <option name="AntTarget" enabled="false" />
-        <option name="BuildArtifacts" enabled="false" />
-        <option name="Make" enabled="true" />
-        <option name="Maven.BeforeRunTask" enabled="false" />
-      </method>
-    </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
       <method>
         <option name="AntTarget" enabled="false" />
         <option name="BuildArtifacts" enabled="false" />
@@ -453,27 +498,27 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1456" height="876" extended-state="6" />
+    <frame x="-8" y="-8" width="1452" height="876" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32960895" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32960895" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32960895" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32960895" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32960895" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2262931" sideWeight="0.6703911" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22550432" sideWeight="0.6703911" order="1" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32960895" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
     </layout>
@@ -515,7 +560,7 @@
     <option name="SHOW_VCS_ERROR_NOTIFICATIONS" value="true" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Change to project structure. Added an editor. Changed from Queue&lt;Token/Statement&gt; to List&lt;Token/Statement&gt;" />
+    <option name="LAST_COMMIT_MESSAGE" value="Beginnings of interpreter, structure change, various renamings/rethinkings" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -529,6 +574,7 @@
     <option name="SHOW_FILE_HISTORY_AS_TREE" value="false" />
     <option name="FILE_HISTORY_SPLITTER_PROPORTION" value="0.6" />
     <MESSAGE value="Change to project structure. Added an editor. Changed from Queue&lt;Token/Statement&gt; to List&lt;Token/Statement&gt;" />
+    <MESSAGE value="Beginnings of interpreter, structure change, various renamings/rethinkings" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -538,102 +584,103 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/tokens/LessThanToken.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="19" selection-start="235" selection-end="235" vertical-scroll-proportion="0.22734027" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/tokens/SemicolonToken.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="19" selection-start="237" selection-end="237" vertical-scroll-proportion="0.22734027" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/tokens/PlusToken.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="19" selection-start="227" selection-end="227" vertical-scroll-proportion="0.22734027" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/exceptions/ParseException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="21" selection-start="257" selection-end="257" vertical-scroll-proportion="0.23981191" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/statements/Expression.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="4" selection-start="180" selection-end="180" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/tokens/IntToken.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="18" selection-start="241" selection-end="241" vertical-scroll-proportion="0.33774835" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/statements/Int.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="36" selection-start="189" selection-end="189" vertical-scroll-proportion="0.26269317" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/statements/Identifier.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="42" selection-start="185" selection-end="195" vertical-scroll-proportion="0.26269317" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/statements/Statement.java">
+    <entry file="file://$PROJECT_DIR$/src/parser/Statement.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="9" column="56" selection-start="256" selection-end="256" vertical-scroll-proportion="0.33774835" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/statements/InitializeStatement.java">
+    <entry file="file://$PROJECT_DIR$/src/parser/ListLiteral.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="22" selection-start="432" selection-end="432" vertical-scroll-proportion="0.3620309" />
+        <state line="16" column="26" selection-start="364" selection-end="364" vertical-scroll-proportion="0.39477503" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/statements/ListLiteral.java">
+    <entry file="file://$PROJECT_DIR$/src/lexer/Lexer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="26" selection-start="364" selection-end="364" vertical-scroll-proportion="0.39477503">
-          <folding />
-        </state>
+        <state line="33" column="30" selection-start="676" selection-end="676" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/exceptions/RunException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="20" selection-start="194" selection-end="194" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Daejo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="26" column="49" selection-start="563" selection-end="563" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Editor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="22" selection-start="585" selection-end="585" vertical-scroll-proportion="0.0">
+        <state line="72" column="59" selection-start="2311" selection-end="2311" vertical-scroll-proportion="0.3620309" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/parser/InitializeStatement.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="67" selection-start="341" selection-end="341" vertical-scroll-proportion="0.17439294">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Interpreter.java">
+    <entry file="file://$PROJECT_DIR$/src/interpreter/Variable.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="11" selection-start="406" selection-end="406" vertical-scroll-proportion="0.0">
+        <state line="20" column="5" selection-start="395" selection-end="395" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Transformer.java">
+    <entry file="file://$PROJECT_DIR$/src/parser/Int.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="0" selection-start="640" selection-end="640" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state line="7" column="36" selection-start="137" selection-end="137" vertical-scroll-proportion="0.26269317">
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Lexer.java">
+    <entry file="file://$PROJECT_DIR$/src/interpreter/ListValue.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="30" selection-start="661" selection-end="661" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#600#607#0" expanded="true" />
-          </folding>
+        <state line="1" column="0" selection-start="21" selection-end="21" vertical-scroll-proportion="0.0">
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Parser.java">
+    <entry file="file://$PROJECT_DIR$/src/interpreter/IntValue.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="121" column="47" selection-start="2985" selection-end="2985" vertical-scroll-proportion="0.33381712">
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#2409#2421#0" expanded="true" />
-          </folding>
+        <state line="17" column="30" selection-start="345" selection-end="345" vertical-scroll-proportion="0.6379691">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/interpreter/DaejoClass.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="8" selection-start="211" selection-end="211" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/interpreter/Value.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="29" selection-start="174" selection-end="174" vertical-scroll-proportion="0.30022076">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/parser/Word.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="30" selection-start="310" selection-end="310" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/parser/Parser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="29" column="36" selection-start="605" selection-end="605" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/interpreter/Interpreter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="42" column="9" selection-start="1052" selection-end="1052" vertical-scroll-proportion="0.29580575">
+          <folding />
         </state>
       </provider>
     </entry>

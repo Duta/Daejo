@@ -1,20 +1,24 @@
-package statements;
+package interpreter;
 
 /**
  * Created with IntelliJ IDEA.
  * User: Bertie
  * Date: 07/06/13
- * Time: 00:57
+ * Time: 15:24
  * To change this template use File | Settings | File Templates.
  */
-public class Int extends Expression {
+public class IntValue extends Value {
 	private int value;
 
-	public Int(int value) {
+	public IntValue(int value) {
 		this.value = value;
 	}
 
-	public int getValue() {
+	public DaejoClass getType() {
+		return DaejoClass.INT;
+	}
+
+	public Integer getValue() {
 		return value;
 	}
 }

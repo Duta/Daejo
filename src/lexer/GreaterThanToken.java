@@ -1,14 +1,14 @@
-package tokens;
+package lexer;
 
 /**
  * Created with IntelliJ IDEA.
  * User: Bertie
  * Date: 06/06/13
- * Time: 23:38
+ * Time: 23:36
  * To change this template use File | Settings | File Templates.
  */
-public class PlusToken extends Token {
-	public PlusToken() {
-		super("+");
+public class GreaterThanToken extends Token {
+	public GreaterThanToken() {
+		super(">");
 	}
 }

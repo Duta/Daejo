@@ -1,5 +1,6 @@
+package lexer;
+
 import exceptions.LexException;
-import tokens.*;
 
 import java.util.ArrayList;
 import java.util.HashMap;

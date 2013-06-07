@@ -1,4 +1,4 @@
-package statements;
+package parser;
 
 /**
  * Created with IntelliJ IDEA.
@@ -8,25 +8,23 @@ package statements;
  * To change this template use File | Settings | File Templates.
  */
 public class InitializeStatement extends Statement {
-	private Identifier type;
-	private Identifier label;
+	private Word label;
 	private Expression expr;
 
-	public InitializeStatement(Identifier type, Identifier label, Expression expr) {
-		this.type = type;
+	public InitializeStatement(Word label, Expression expr) {
 		this.label = label;
 		this.expr = expr;
 	}
 
-	public Identifier getType() {
-		return type;
-	}
-
-	public Identifier getLabel() {
+	public Word getLabel() {
 		return label;
 	}
 
 	public Expression getExpr() {
 		return expr;
+	}
+
+	public String toString() {
+		return super.toString() + "{" + label.getWord() + "}";
 	}
 }
