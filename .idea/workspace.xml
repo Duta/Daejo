@@ -1,38 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8b57aeb2-4e0e-4ab6-8e32-d1961dd8610d" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Interpreter.java" />
-      <change type="MOVED" beforePath="C:\Users\Bertie\Documents\GitHub\Daejo\src\CommaToken.java" afterPath="$PROJECT_DIR$/src/tokens/CommaToken.java" />
-      <change type="MOVED" beforePath="C:\Users\Bertie\Documents\GitHub\Daejo\src\EOFToken.java" afterPath="$PROJECT_DIR$/src/tokens/EOFToken.java" />
-      <change type="MOVED" beforePath="C:\Users\Bertie\Documents\GitHub\Daejo\src\EqualsToken.java" afterPath="$PROJECT_DIR$/src/tokens/EqualsToken.java" />
-      <change type="MOVED" beforePath="C:\Users\Bertie\Documents\GitHub\Daejo\src\Expression.java" afterPath="$PROJECT_DIR$/src/statements/Expression.java" />
-      <change type="MOVED" beforePath="C:\Users\Bertie\Documents\GitHub\Daejo\src\GreaterThanToken.java" afterPath="$PROJECT_DIR$/src/tokens/GreaterThanToken.java" />
-      <change type="MOVED" beforePath="C:\Users\Bertie\Documents\GitHub\Daejo\src\Identifier.java" afterPath="$PROJECT_DIR$/src/statements/Identifier.java" />
-      <change type="MOVED" beforePath="C:\Users\Bertie\Documents\GitHub\Daejo\src\InitializeStatement.java" afterPath="$PROJECT_DIR$/src/statements/InitializeStatement.java" />
-      <change type="MOVED" beforePath="C:\Users\Bertie\Documents\GitHub\Daejo\src\Int.java" afterPath="$PROJECT_DIR$/src/statements/Int.java" />
-      <change type="MOVED" beforePath="C:\Users\Bertie\Documents\GitHub\Daejo\src\IntToken.java" afterPath="$PROJECT_DIR$/src/tokens/IntToken.java" />
-      <change type="MOVED" beforePath="C:\Users\Bertie\Documents\GitHub\Daejo\src\LSqBrackToken.java" afterPath="$PROJECT_DIR$/src/tokens/LSqBrackToken.java" />
-      <change type="MOVED" beforePath="C:\Users\Bertie\Documents\GitHub\Daejo\src\LessThanToken.java" afterPath="$PROJECT_DIR$/src/tokens/LessThanToken.java" />
-      <change type="MOVED" beforePath="C:\Users\Bertie\Documents\GitHub\Daejo\src\LexException.java" afterPath="$PROJECT_DIR$/src/exceptions/LexException.java" />
-      <change type="MOVED" beforePath="C:\Users\Bertie\Documents\GitHub\Daejo\src\ListLiteral.java" afterPath="$PROJECT_DIR$/src/statements/ListLiteral.java" />
-      <change type="MOVED" beforePath="C:\Users\Bertie\Documents\GitHub\Daejo\src\ParseException.java" afterPath="$PROJECT_DIR$/src/exceptions/ParseException.java" />
-      <change type="MOVED" beforePath="C:\Users\Bertie\Documents\GitHub\Daejo\src\PlusToken.java" afterPath="$PROJECT_DIR$/src/tokens/PlusToken.java" />
-      <change type="MOVED" beforePath="C:\Users\Bertie\Documents\GitHub\Daejo\src\RSqBrackToken.java" afterPath="$PROJECT_DIR$/src/tokens/RSqBrackToken.java" />
-      <change type="MOVED" beforePath="C:\Users\Bertie\Documents\GitHub\Daejo\src\SemicolonToken.java" afterPath="$PROJECT_DIR$/src/tokens/SemicolonToken.java" />
-      <change type="MOVED" beforePath="C:\Users\Bertie\Documents\GitHub\Daejo\src\Statement.java" afterPath="$PROJECT_DIR$/src/statements/Statement.java" />
-      <change type="MOVED" beforePath="C:\Users\Bertie\Documents\GitHub\Daejo\src\Token.java" afterPath="$PROJECT_DIR$/src/tokens/Token.java" />
-      <change type="MOVED" beforePath="C:\Users\Bertie\Documents\GitHub\Daejo\src\WhitespaceToken.java" afterPath="$PROJECT_DIR$/src/tokens/WhitespaceToken.java" />
-      <change type="MOVED" beforePath="C:\Users\Bertie\Documents\GitHub\Daejo\src\WordToken.java" afterPath="$PROJECT_DIR$/src/tokens/WordToken.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Editor.java" afterPath="$PROJECT_DIR$/src/Editor.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Lexer.java" afterPath="$PROJECT_DIR$/src/Lexer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Parser.java" afterPath="$PROJECT_DIR$/src/Parser.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Transformer.java" afterPath="$PROJECT_DIR$/src/Transformer.java" />
-    </list>
+    <list default="true" id="8b57aeb2-4e0e-4ab6-8e32-d1961dd8610d" name="Default" comment="" />
     <ignored path="Daejo.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -103,7 +72,7 @@
       <file leaf-file-name="Parser.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Parser.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="106" column="33" selection-start="2557" selection-end="2557" vertical-scroll-proportion="0.16997792">
+            <state line="121" column="47" selection-start="2985" selection-end="2985" vertical-scroll-proportion="0.33381712">
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#2409#2421#0" expanded="true" />
@@ -165,11 +134,11 @@
         <option value="$PROJECT_DIR$/src/Identifier.java" />
         <option value="$PROJECT_DIR$/src/ListLiteral.java" />
         <option value="$PROJECT_DIR$/src/Statement.java" />
-        <option value="$PROJECT_DIR$/src/Parser.java" />
         <option value="$PROJECT_DIR$/src/Lexer.java" />
         <option value="$PROJECT_DIR$/src/Transformer.java" />
         <option value="$PROJECT_DIR$/src/Editor.java" />
         <option value="$PROJECT_DIR$/src/Interpreter.java" />
+        <option value="$PROJECT_DIR$/src/Parser.java" />
       </list>
     </option>
   </component>
@@ -456,6 +425,11 @@
       <created>1370539544108</created>
       <updated>1370539544108</updated>
     </task>
+    <task id="LOCAL-00001" summary="Change to project structure. Added an editor. Changed from Queue&lt;Token/Statement&gt; to List&lt;Token/Statement&gt;">
+      <created>1370611934532</created>
+      <updated>1370611934532</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TodoView" selected-index="3">
@@ -490,7 +464,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32960895" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32960895" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32960895" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32960895" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -655,7 +629,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Parser.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="106" column="33" selection-start="2557" selection-end="2557" vertical-scroll-proportion="0.16997792">
+        <state line="121" column="47" selection-start="2985" selection-end="2985" vertical-scroll-proportion="0.33381712">
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#2409#2421#0" expanded="true" />
